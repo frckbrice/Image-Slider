@@ -42,7 +42,7 @@ function slider() {
       }
       currPosition++;
    });
-   
+
    rightBtn.addEventListener("click", () => {
      clearInterval(timer);
      document.querySelector(".image").src = imgSrcArray[currPosition + 1];

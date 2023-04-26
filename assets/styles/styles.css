@@ -18,7 +18,6 @@ body {
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  z-index: 1;
 }
 
 .main-container {
@@ -31,30 +30,34 @@ body {
   align-items: center;
 }
 
-.cover {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  display: flex;
-  gap: 0;
-}
-
 .display-div {
   width: 100%;
-  height: 35vw;
+  height: 30vw;
   background: url("../images/Toyi-hilux.jpeg");
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1 1 80%;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
-  scroll-behavior: smooth;
   position: relative;
   box-shadow: 0 -5px 10px #fdea3c;
+  animation: 10s autoplay2 infinite ease-in-out;
+  z-index: 0;
 }
+
+/* .display-div > * {
+  position: absolute; top: 0; left: 100%;
+  animation: 12s autoplay2 infinite ease-in-out
+}
+*/
+@keyframes autoplay2 {
+  0% {left: 100%}
+  24% {left: -5%}
+  40% {left: 10%}
+  60% {right: 20%}
+  70% {right: 10%}
+  80% {right: 5%}
+  100% {left: -120%}
+} 
 
 .image {
   width: 100%;
@@ -64,13 +67,15 @@ body {
 }
 
 .title {
-  margin-top: 5%;
+  margin-top: 10%;
   color: green;
-
-  font-family: "Permanent Marker", cursive;
+box-shadow: 0 -5px 10px #fdea3c;
+ font-family: 'Permanent Marker', cursive;
+ border-radius: 20px;
 }
 
 .div-btn {
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,47 +105,68 @@ body {
   h5 {
     text-align: center;
   }
-   .btn-icon {
-  font-size: 30px;
-}
+  .btn-icon {
+    font-size: 30px;
+    /* align-self: flex-start; */
+  }
 
-.div-btn {
-  padding: 0;
-  margin: 0;
-}
+  .div-btn {
+    padding-right: 0;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  
 }
 
 @media (max-width: 425px) {
-.main-container {
+  .main-container {
     height: auto;
     width: 100%;
     margin-top: 10%;
   }
 
   .btn-icon {
-  font-size: 30px;
+    font-size: 30px;
+  }
+
+  .title {
+    margin-top: 20%;
+    font-size: 30px;
+    width: 340px;
+    margin-left: 8vw;
+    padding: 0 10px; 
+  }
+
+  body {
+    display: block;
+  }
 }
 
-.title {
-  margin-top: 13%;
-  display: flex;
-  justify-content: center;
-}
-
-body {
-  display: block;
-}
-}
-
-/* @media (max-width: 375px) 
+@media (max-width: 375px) 
    {
-.main-container {
-    height: auto;
-    width: 100%;
-    padding: 5% 0;
+ .title {
+    width: 290px;
+    display: flex;
+    justify-content: center;
   }
 
   .btn-icon {
   font-size: 30px;
 }
-} */
+}
+
+@media (max-width: 320px) 
+   {
+ .title {
+    width: 240px;
+    display: flex;
+    justify-content: center;
+    margin-left: 12vw;
+    font-size: 20px;
+  }
+
+  .btn-icon {
+  font-size: 30px;
+}
+}
