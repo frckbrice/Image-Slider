@@ -50,7 +50,7 @@ function slider() {
       }
       currPosition++;
    });
-   window.loard
+   
 }
 
 slider();
