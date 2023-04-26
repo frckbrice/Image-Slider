@@ -30,8 +30,8 @@ function slider() {
     currPosition++;
   }, 3000);
 
-   const leftBtn = document.querySelector(".backward-btn");
-   const rightBtn = document.querySelector(".forward-btn");
+   const leftBtn = document.querySelector(".backward");
+   const rightBtn = document.querySelector(".forward");
    
 
    leftBtn.addEventListener("click", () => {
@@ -42,6 +42,7 @@ function slider() {
       }
       currPosition++;
    });
+   
    rightBtn.addEventListener("click", () => {
      clearInterval(timer);
      document.querySelector(".image").src = imgSrcArray[currPosition + 1];
