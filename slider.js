@@ -13,8 +13,16 @@ let imgSrcArray = [
   "./assets/images/oldman.jpeg",
   "./assets/images/new-coming-bank-paper.jpg",
   "./assets/images/free.jpeg",
-  "./assets/images/fake.jpeg",
   "./assets/images/partofcamer.png",
+  "./assets/images/natèbroasdcasttv.jpeg",
+  "./assets/images/newcameroon.jpg",
+  "./assets/images/inovation.jpeg",
+  "./assets/images/coins.jpeg",
+  "./assets/images/investin237.jpeg",
+  "./assets/images/wiki.png",
+  "./assets/images/wining.jpeg",
+  "./assets/images/cocoa.jpeg",
+  "./assets/images/banga.jpeg",
 ];
 
 // let imgSrcArray = ["./assets/`${images/}`"];
@@ -22,7 +30,7 @@ let imgSrcArray = [
 //function that make images sliding
 function slider() {
   let currPosition = 0;
- let timer = setInterval(function () {
+  let timer = setInterval(function () {
     document.querySelector(".image").src = imgSrcArray[currPosition];
     if (currPosition == imgSrcArray.length) {
       currPosition = 0;
@@ -30,29 +38,25 @@ function slider() {
     currPosition++;
   }, 3000);
 
-   const leftBtn = document.querySelector(".backward");
-   const rightBtn = document.querySelector(".forward");
-   
+  const leftBtn = document.querySelector(".backward");
+  const rightBtn = document.querySelector(".forward");
 
-   leftBtn.addEventListener("click", () => {
-     clearInterval(timer);
-     document.querySelector(".image").src = imgSrcArray[currPosition - 1];
-      if (currPosition == imgSrcArray.length) {
-        currPosition = 0;
-      }
-      currPosition++;
-   });
+  leftBtn.addEventListener("click", () => {
+    clearInterval(timer);
+    document.querySelector(".image").src = imgSrcArray[currPosition - 1];
+    if (currPosition == imgSrcArray.length) {
+      currPosition = 0;
+    }
+    currPosition++;
+  });
 
-   rightBtn.addEventListener("click", () => {
-     clearInterval(timer);
-     document.querySelector(".image").src = imgSrcArray[currPosition + 1];
-      if (currPosition == imgSrcArray.length) {
-        currPosition = 0;
-      }
-      currPosition++;
-   });
-   
+  rightBtn.addEventListener("click", () => {
+    clearInterval(timer);
+    document.querySelector(".image").src = imgSrcArray[currPosition + 1];
+    if (currPosition == imgSrcArray.length) {
+      currPosition = 0;
+    }
+    currPosition++;
+  });
 }
-
 slider();
-
