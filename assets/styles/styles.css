@@ -136,6 +136,8 @@ box-shadow: 0 -5px 10px #fdea3c;
     width: 340px;
     margin-left: 8vw;
     padding: 0 10px; 
+    display: flex;
+    justify-content: center;
   }
 
   body {
@@ -149,6 +151,8 @@ box-shadow: 0 -5px 10px #fdea3c;
     width: 290px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 20px;
   }
 
   .btn-icon {
@@ -162,6 +166,7 @@ box-shadow: 0 -5px 10px #fdea3c;
     width: 240px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-left: 12vw;
     font-size: 20px;
   }
