@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px red solid; */
 }
 
 body {
@@ -50,14 +51,28 @@ body {
 }
 */
 @keyframes autoplay2 {
-  0% {left: 100%}
-  24% {left: -5%}
-  40% {left: 10%}
-  60% {right: 20%}
-  70% {right: 10%}
-  80% {right: 5%}
-  100% {left: -120%}
-} 
+  0% {
+    left: 100%;
+  }
+  24% {
+    left: -5%;
+  }
+  40% {
+    left: 10%;
+  }
+  60% {
+    right: 20%;
+  }
+  70% {
+    right: 10%;
+  }
+  80% {
+    right: 5%;
+  }
+  100% {
+    left: -120%;
+  }
+}
 
 .image {
   width: 100%;
@@ -68,10 +83,12 @@ body {
 
 .title {
   margin-top: 10%;
-  color: green;
-box-shadow: 0 -5px 10px #fdea3c;
- font-family: 'Permanent Marker', cursive;
- border-radius: 20px;
+  color: #fdea3c;
+  box-shadow: 0 -5px 10px #fdea3c;
+  font-family: "Permanent Marker", cursive;
+  border-radius: 20px;
+  border: none;
+  outline: 0;
 }
 
 .div-btn {
@@ -116,7 +133,15 @@ box-shadow: 0 -5px 10px #fdea3c;
     align-items: flex-start;
   }
 
-  
+    .forward {
+    position: absolute;
+   right: 30px;
+  }
+
+  .display-div {
+    height: 40vw;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 425px) {
@@ -135,7 +160,7 @@ box-shadow: 0 -5px 10px #fdea3c;
     font-size: 30px;
     width: 340px;
     margin-left: 8vw;
-    padding: 0 10px; 
+    padding: 0 10px;
     display: flex;
     justify-content: center;
   }
@@ -143,11 +168,30 @@ box-shadow: 0 -5px 10px #fdea3c;
   body {
     display: block;
   }
+
+   .forward {
+    position: absolute;
+   right: 5px;
+  }
+
+  .backward {
+     position: absolute;
+     left: 1px;
+  }
+
+   .display-div {
+    height: 40vh;
+    margin-bottom: 0;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-@media (max-width: 375px) 
-   {
- .title {
+@media (max-width: 375px) {
+  .title {
     width: 290px;
     display: flex;
     justify-content: center;
@@ -156,13 +200,24 @@ box-shadow: 0 -5px 10px #fdea3c;
   }
 
   .btn-icon {
-  font-size: 30px;
-}
+    font-size: 30px;
+  }
+
+  .forward {
+    position: absolute;
+   right: 2px;
+  }
+
+  .backward {
+     position: absolute;
+     left: 1px;
+  }
+
+ 
 }
 
-@media (max-width: 320px) 
-   {
- .title {
+@media (max-width: 320px) {
+  .title {
     width: 240px;
     display: flex;
     justify-content: center;
@@ -172,6 +227,6 @@ box-shadow: 0 -5px 10px #fdea3c;
   }
 
   .btn-icon {
-  font-size: 30px;
-}
+    font-size: 30px;
+  }
 }
